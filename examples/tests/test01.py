@@ -34,12 +34,12 @@ else:
 # the HSPF main routine needs the location of this file and the UCI file
 
 pyhspfdirectory = os.path.dirname(hspf.__file__)
-messagepath = '{}/pyhspf/core/hspfmsg.wdm'.format(pyhspfdirectory)
+messagepath = 'hspfmsg.wdm'
 
 # before running the examples, we have to create the WDM files used by the 
 # test runs, which we will do with the WDMUtil class
 
-wdm = WDMUtil(verbose = True)
+wdm = WDMUtil(verbose = True, messagepath = messagepath)
 
 # the name of the WDM file used in the test UCIs is test.wdm
 # open it up for write access

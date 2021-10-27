@@ -21,7 +21,7 @@ parallel = True
 # path to the message file in PyHSPF (hspfmsg.wdm)
 
 pyhspfdirectory = os.path.dirname(hspf.__file__)
-messagepath = '{}/pyhspf/core/hspfmsg.wdm'.format(pyhspfdirectory)
+messagepath = 'hspfmsg.wdm'
 
 # create a function for mapping the processes
 

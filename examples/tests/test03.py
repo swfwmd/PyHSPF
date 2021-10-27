@@ -27,12 +27,12 @@ if not os.path.isfile('test.wdm'):
 # this is the path to the message file in PyHSPF (hspfmsg.wdm)
 
 pyhspfdirectory = os.path.dirname(hspf.__file__)
-messagepath = '{}/pyhspf/core/hspfmsg.wdm'.format(pyhspfdirectory)
+messagepath = 'hspfmsg.wdm'
 
 # the 3rd simulation adds more data to "test.wdm," so we need to create the
 # datasets as before.
 
-wdm = WDMUtil(verbose = True)
+wdm = WDMUtil(verbose = True, messagepath = messagepath)
 
 wdm.open('test.wdm', 'rw')
 

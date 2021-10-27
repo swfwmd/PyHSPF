@@ -228,8 +228,9 @@ watershed.add_outlet('30')
 # since the climate data are provided with hspexp in an export file called
 # "huntobs.exp."  WDMUtil has a method to automatically import the data to a 
 # WDM file.
+messagepath = 'hspfmsg.wdm'
 
-wdm = WDMUtil()
+wdm = WDMUtil(messagepath = messagepath)
 
 # the data from the export file (*.exp) provided with hspexp need to be 
 # imported into a wdm file. WDMUtil has a method for this.
@@ -285,7 +286,7 @@ times = [start + (end-start) / len(precip) * i for i in range(len(precip))]
 
 # make the HSPFModel instance
 
-hspfmodel = HSPFModel(units = 'English')
+hspfmodel = HSPFModel(units = 'English', messagepath = messagepath)
 
 # build the model (file will all be called example03)
 

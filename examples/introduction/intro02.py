@@ -119,8 +119,9 @@ watershed.add_outlet(sname)
 # option of English instead of metric units)
 
 from pyhspf import HSPFModel
+messagepath = 'hspfmsg.wdm'
 
-hspfmodel = HSPFModel(units = 'English')
+hspfmodel = HSPFModel(units = 'English', messagepath = messagepath)
 
 # since the climate data are provided with hspexp in an export file called
 # "huntobs.exp."  WDMUtil has a method to automatically import the data to a 
@@ -128,7 +129,7 @@ hspfmodel = HSPFModel(units = 'English')
 
 from pyhspf import WDMUtil
 
-wdm = WDMUtil()
+wdm = WDMUtil( messagepath = messagepath)
 
 # path to hspexp2.4 data files (make sure the path is correct) 
 # the data from the export file (*.exp) provided with hspexp need to be 

@@ -22,7 +22,7 @@ else:
 # this is the path to the message file in PyHSPF (hspfmsg.wdm)
 
 pyhspfdirectory = os.path.dirname(hspf.__file__)
-messagepath = '{}/pyhspf/core/hspfmsg.wdm'.format(pyhspfdirectory)
+messagepath = 'hspfmsg.wdm'
 
 # there is really nothing to do but just run these--but if you feel creative
 # and wish to contribute it would be nice if someone would pull out the results

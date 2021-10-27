@@ -210,8 +210,9 @@ wdmoutfile = filename + '_out.wdm'
 outfile = filename + '.out' 
 
 # create an instance of the HSPFModel class
+messagepath = 'hspfmsg.wdm'
 
-hspfmodel = HSPFModel()
+hspfmodel = HSPFModel( messagepath = messagepath)
 
 # and build the model from the watershed
 
@@ -345,7 +346,7 @@ from pyhspf import WDMUtil
 
 # create an instance of WDMUtil
 
-wdm = WDMUtil()
+wdm = WDMUtil( messagepath = messagepath)
 
 # open the file for read access
 
